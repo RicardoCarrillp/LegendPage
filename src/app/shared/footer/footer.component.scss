@@ -1,0 +1,48 @@
+.footer-container {
+  padding: 22px 33px;
+  background-color: #000;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  .routing {
+    display: flex;
+    gap: 1em;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: red;
+      font-family: proxima-nova;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 9.75px;
+      letter-spacing: 0.2em;
+      line-height: 1.5em;
+      text-transform: uppercase;
+    }
+  }
+  .rsss {
+    color: #fff;
+  }
+  .main-link {
+    text-decoration: none;
+    color: red;
+    border-bottom: solid 1px red;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  .main-link:hover {
+    opacity: 0.4;
+  }
+
+  h2 {
+    font-family: roc-grotesk-extrawide;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 0.075em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+  }
+}
