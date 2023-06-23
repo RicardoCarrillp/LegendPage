@@ -1,18 +1,5 @@
-<div class="container">
-  <div class="logo">
-    <!-- <svg width="600" height="300">
-      <path id="motionPath" fill="none" d="M100,200 Q200,100 300,200" />
-      <text>
-        <textPath href="#motionPath" startOffset="50%">
-          <animate attributeName="startOffset" from="-50%" to="150%" begin="0s" dur="3s" repeatCount="indefinite">
-          Text Content Goes Here
-          </animate>
-        </textPath>
-      </text>
-    </svg> -->
-    <!-- <svg class="svgwave" xmlns="http://www.w3.org/2000/svg" width="301" height="21" viewBox="0 0 301 21">
-<path id="wavepath" d="M0,.5c30.0978,0,30.0978,20,60.1956,20S90.2948.5,120.394.5s30.1,20,60.2,20c30.1015,0,30.1015-20,60.203-20s30.1014,20,60.2029,20"></path>
-</svg> -->
+<div class="container" data-scroll-container>
+  <div class="logo" data-scroll-section>
     <div class="loopText">
       <svg
         class="svgwave"
@@ -21,14 +8,13 @@
         height="21"
         viewBox="0 0 301 21"
       >
-        <path id="wavepath" d="M 0 59 C 164 -128 290 41 459 63 M 458 62 C 304.6667 60.6667 124 448 -2 58"></path>
+        <path
+          id="wavepath"
+          d="M 0 59 C 164 -128 290 41 459 63 M 458 62 C 304.6667 60.6667 124 448 -2 58"
+        ></path>
 
         <text text-anchor="middle">
-          <textPath
-            class="my-text"
-            side="left"
-            href="#wavepath"
-          >
+          <textPath class="my-text" side="left" href="#wavepath">
             <animate
               attributeName="startOffset"
               from="-100%"
@@ -39,15 +25,60 @@
               values="10%;0%"
             ></animate>
 
-
             HI THERE! I'M SAZKY A CREATIVE ART DIRECTOR, BASED IN SPAIN,
             FOLLOWING MY PASSIONS THROUGH ART, ADVERTISING AND CREATIVITY. ///
-
           </textPath>
         </text>
       </svg>
     </div>
-
-
   </div>
+  <div class="video-wrapper" data-scroll-section>
+    <video playsinline autoplay [muted]="'muted'" loop>
+      <source
+        src="../../../assets/img/DUKI, Jhayco - RoCKSTAR 2.0 (Video Oficial).mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="header">
+      <img src="../../../assets/img/Text-14.png" alt="" />
+    </div>
+  </div>
+
+  <div class="logoBlack" data-scroll-section>
+    <div class="loopText">
+      <svg
+        class="svgwave"
+        xmlns="http://www.w3.org/2000/svg"
+        width="301"
+        height="21"
+        viewBox="0 0 301 21"
+      >
+        <path
+          id="wavepath"
+          d="M 0 59 C 164 -128 290 41 459 63 M 458 62 C 304.6667 60.6667 124 448 -2 58"
+        ></path>
+
+        <text text-anchor="middle">
+          <textPath class="my-text" side="left" href="#wavepath">
+            <animate
+              attributeName="startOffset"
+              from="-100%"
+              to="150%"
+              begin="0s"
+              dur="10s"
+              repeatCount="indefinite"
+              values="10%;0%"
+            ></animate>
+
+            HI THERE! I'M SAZKY A CREATIVE ART DIRECTOR, BASED IN SPAIN,
+            FOLLOWING MY PASSIONS THROUGH ART, ADVERTISING AND CREATIVITY. ///
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </div>
+
+  <app-squares></app-squares>
 </div>

@@ -1,0 +1,7 @@
+  <div class="squares" data-scroll-section>
+    <a [href]="item.url" class="squares-link" *ngFor="let item of this.imageList">
+    <div class="inside-square" style="background-image: url({{item.img}})" >
+      <h2>{{item.text}}</h2>
+    </div>
+    </a>
+  </div>

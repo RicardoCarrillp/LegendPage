@@ -1,5 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~locomotive-scroll/dist/locomotive-scroll.css';
 *{
   margin: 0;
   padding: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body::-webkit-scrollbar {
+  background-color: #000;
+  width: 16px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #000;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #525252;
+  border-radius: 16px;
+  border: 4px solid #000;
+}
+body::-webkit-scrollbar-button {
+  display: none;
 }

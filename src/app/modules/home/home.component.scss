@@ -3,6 +3,85 @@
   .logo {
     padding: 5px;
     padding-top: 2rem;
+    svg {
+      background-image: url("../../../assets/img/legend.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .logoBlack {
+    padding: 5px;
+    padding-top: 2rem;
+    background-color: red;
+    svg {
+      background-image: url("../../../assets/img/legendblack.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .video-wrapper {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .header {
+      position: relative;
+      img {
+        width: 100%;
+        z-index: 2;
+      }
+    }
+  }
+  .squares a.squares-link .inside-square:hover {
+    h2 {
+      font-weight: 800;
+    }
+    opacity: 0.9;
+    transition: opacity 200ms ease 0s;
+  }
+  .squares {
+    height: 100vh;
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    position: relative;
+    .squares-link {
+      text-decoration: none;
+      background-color: white;
+      .inside-square {
+        height: 325px;
+        display: flex;
+        padding-left: 7vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        align-items: center;
+        h2 {
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 700;
+          font-style: normal;
+          font-size: 10px;
+          letter-spacing: 0.2em;
+          line-height: 3em;
+          text-transform: uppercase;
+          color: red;
+        }
+      }
+    }
   }
 }
 
@@ -12,24 +91,18 @@
 
 @media (width<1000px) {
   svg {
-  background-image: url("../../../assets/img/legend.png");
+    background-image: url("../../../assets/img/legend.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-svg.svgwave {
-  width: 100%;
-  height: 90vh;
-  overflow: visible;
-}
+  }
+  svg.svgwave {
+    width: 100%;
+    height: 90vh;
+    overflow: visible;
+  }
 }
 
-svg {
-  background-image: url("../../../assets/img/legend.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 svg.svgwave {
   width: 100%;
   height: 90vh;
@@ -45,8 +118,8 @@ svg.svgwave text {
   font-size: 10px;
   fill: rgba(111, 88, 42, 0.9);
   font-family: normalidad-ultraextended;
-    font-weight: 500;
-    font-style: normal;
+  font-weight: 500;
+  font-style: normal;
 }
 
 @keyframes circularMotion {

@@ -1,7 +1,6 @@
 .nav-container {
   background-color: black;
   width: 100%;
-  // position: absolute;
   display: flex;
   top: 0;
   left: 0;
@@ -9,7 +8,6 @@
   justify-content: flex-start;
   align-items: center;
 }
-
 .nav-container ul {
   list-style: none;
   padding-inline-start: 0;
@@ -34,7 +32,7 @@
   letter-spacing: 0.19em;
   padding-left: 2rem;
   padding-top: 1px;
-  padding-right: 8rem;
+  padding-right: 6rem;
 }
 
 @media (width<826px) {
