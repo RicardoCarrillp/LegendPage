@@ -1,8 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import gsap from 'gsap';
-import MotionPathPlugin from 'gsap/MotionPathPlugin';
-import LocomotiveScroll  from 'locomotive-scroll';
-
+import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import 'jarallax';
+declare var jarallax: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,44 +10,25 @@ import LocomotiveScroll  from 'locomotive-scroll';
 export class HomeComponent implements OnInit {
   @ViewChild('data-scroll-container') public element!: ElementRef;
   scroll!: any;
+  statement!:any;
 
-
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private changeDetector: ChangeDetectorRef) { }
 
   ngOnInit() {
 
-    // console.log('====================================');
-    // console.log(this.element.nativeElement);
-    // console.log('====================================');
-    // this.scroll = new LocomotiveScroll({
-    //   el: this.element.nativeElement.innerHTML,
-    //   smooth: true,
-    //   getSpeed:true
-    // });
+
+  }
+  setVideo() {
+    jarallax(document.querySelectorAll('.logo'), {
+      speed: 0.2,
+      videoSrc: 'https://vimeo.com/groups/freehd/videos/153749650'
+    });
   }
 
-  ngAfterViewInit() {
-    console.log('====================================');
-    console.log(this.element.nativeElement);
-    console.log('====================================');
-    this.scroll = new LocomotiveScroll({
-      el: this.element.nativeElement,
-      smooth: true,
-      getSpeed: true
-    });
-  //   gsap.registerPlugin(MotionPathPlugin);
+  changeStatement() {
+    this.statement = true;
+    this.changeDetector.detectChanges();
+    this.setVideo();
+  }
 
-  //   const textPath = document.querySelector('#animatedText');
-
-  //   gsap.to(textPath, {
-  //     duration: 5,
-  //     repeat: -1,
-  //     motionPath: {
-  //       path: '#motionPath',
-  //       align: '#motionPath',
-  //       autoRotate: true
-  //     }
-  //   });
-  // }
-}
 }
